@@ -8,8 +8,8 @@ jobs:
     steps:
       - checkout
       - run: 
-        name: "Deploy to Firebase"
-        command: npm run deploy
+          name: "Deploy to Firebase"
+          command: npm run deploy
 
 # Orchestrate our job run sequence
 workflows:
