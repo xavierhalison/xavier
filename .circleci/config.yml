@@ -10,4 +10,8 @@ workflows:
   xavier_build:
     # Run the welcome/run job in its own container
     jobs:
-      - build
+      build: 
+        steps: 
+          - run: 
+              name: Xavier Build
+              command: npm run build
