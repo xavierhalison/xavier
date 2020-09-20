@@ -10,7 +10,7 @@ workflows:
   xavier_build:
     # Run the welcome/run job in its own container
     jobs:
-      build: 
+      build_x: 
         steps: 
           - run: 
               name: Xavier Build
