@@ -9,6 +9,7 @@ workflows:
     jobs:
       build_x: 
         steps: 
+          - checkout
           - run: 
               name: Xavier Build
               command: npm run build
