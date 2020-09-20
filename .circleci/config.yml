@@ -1,15 +1,19 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-# Orchestrate or schedule a set of jobs
+# Define the jobs we want to run for this project
+jobs:
+  build:
+    steps:
+      - checkout
+      - run: echo "this is the build job"
+  test:
+    steps:
+      - checkout
+      - run: echo "this is the test job"
+
+# Orchestrate our job run sequence
 workflows:
-  # Name the workflow "welcome"
-  xavier_build:
-    # Run the welcome/run job in its own container
+  build_and_test:
     jobs:
-      build_x: 
-        steps: 
-          - checkout
-          - run: 
-              name: Xavier Build
-              command: npm run build
+      - build
+      - test
